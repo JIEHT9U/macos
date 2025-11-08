@@ -129,6 +129,14 @@ endif
 rmi:
 	@docker image rm -f $(FULL_TAG) || true
 
+# Convenience alias to docker image prune -f (removes dangling images)
+# Usage:
+#   make prune
+.PHONY: prune
+prune:
+	@echo "Running 'docker image prune -f' to remove dangling images"
+	@docker image prune -f || true
+
 # Clean: stop container and remove it
 .PHONY: clean
 clean: stop

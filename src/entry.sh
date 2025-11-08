@@ -17,6 +17,7 @@ cd /run
 . disk.sh       # Initialize disks
 . display.sh    # Initialize graphics
 . network.sh    # Initialize network
+. merge.sh      # Merge optional plist patches into /assets/config.plist at runtime (applies spoof/patch files if present)
 . boot.sh       # Configure boot
 . proc.sh       # Initialize processor
 . memory.sh     # Check available memory
